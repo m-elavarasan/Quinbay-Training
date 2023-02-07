@@ -1,7 +1,7 @@
 <template>
   <nav>
     <div class="search-container">
-      <input type="text" v-model="searchText" @keyup.enter="handleSearch" />
+      <input type="text" v-model="searchText" placeholder="Search Text...." @keyup.enter="handleSearch" />
       <button @click="handleSearch">Search</button>
     </div>
   </nav>
@@ -11,7 +11,7 @@
   export default {
     data() {
       return {
-        searchText: 'samsung'
+        searchText: ''
       }
     },
     methods: {
