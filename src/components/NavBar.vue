@@ -42,7 +42,7 @@
   }
   .search-container {
     display: inline-flex;
-      justify-content: inline-flex;
+    justify-content: inline-flex;
     
   }
   input[type="text"] {

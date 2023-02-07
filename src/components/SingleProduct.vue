@@ -2,7 +2,7 @@
   
   <div class="single-product" v-if="product.data">
     <!-- <SpecBar :productSpec="product.data.uniqueSellingPoint" ></SpecBar> -->
-    <img :src="this.product.data.images[0].full"/>
+    <img :src="product.data.images[0].full"/>
     <h3>{{ product.data.name }}</h3>
     <p>Price: {{ product.data.price.listed}}</p>
     <p>Brand: {{ product.data.brand.name }}</p>
