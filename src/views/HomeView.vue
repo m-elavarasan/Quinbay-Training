@@ -28,14 +28,14 @@ data() {
     };
   },
   methods: {
-    // addProductToCart(product) {
-      // let productIndex = this.cartItems.findIndex(item => item.id === product.id);
-      // if (productIndex === -1) {
-        // this.cartItems.push({ ...product, count: 1 });
-      // } else {
-        // this.cartItems[productIndex].count++;
-      // }
-    // }
+    addProductToCart(product) {
+      let productIndex = this.cartItems.findIndex(item => item.id === product.id);
+      if (productIndex === -1) {
+        this.cartItems.push({ ...product, count: 1 });
+      } else {
+        this.cartItems[productIndex].count++;
+      }
+    }
   },
   computed: {
     ...mapGetters(["getCartData"])
