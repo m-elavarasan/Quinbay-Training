@@ -2,7 +2,7 @@
   
   <div class="single-product" v-if="product.data">
     <!-- <SpecBar :productSpec="product.data.uniqueSellingPoint" ></SpecBar> -->
-    <img :src="product.data.images[0].full" width="500px" height="500px" />
+    <img :src="this.product.data.images[0].full"/>
     <h3>{{ product.data.name }}</h3>
     <p>Price: {{ product.data.price.listed}}</p>
     <p>Brand: {{ product.data.brand.name }}</p>
@@ -33,10 +33,11 @@ export default {
 methods: {
     ...mapActions(['addToCart']),
     addProductToCart(product) {
-        this.addToCart(product)
+            console.log('add to cart');
+        this.addToCart(product.data)
     },
     getProductDetails() {
-      // console.log('inside getproduct');
+      console.log('inside getproduct');
       axios
         .get(`https://www.blibli.com/backend/product-detail/products/${this.id}/_summary`)
         .then(response => {
@@ -51,15 +52,15 @@ methods: {
 .single-product {
   background: lightblue;
   float: left;
-  margin-left: 21%;
   margin-top: 5%;
-  width: 55%;
+  width: 75%;
   text-align: center;
   padding: 2%;
 }
 
 img {
-  width: 100%;
+  margin-top: 5%;
+  width: 50%;
   height: auto;
 }
 
