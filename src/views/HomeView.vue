@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import { mapActions, mapGetters } from "vuex";
+import {mapGetters } from "vuex";
 import ProductList from '../components/ProductList.vue';
 import LeftBar from '@/components/LeftBar.vue';
 import NavBar from '@/components/NavBar.vue';
